@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "341778039663",
+    "firebase_url": "https://new-notepad.firebaseio.com",
+    "project_id": "new-notepad",
+    "storage_bucket": "new-notepad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341778039663:android:f60932d2e64451555a1e9a",
+        "android_client_info": {
+          "package_name": "com.hilarywang29.new_notepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341778039663-2qfor0q2nj1d0r7sbjjrkc2t83nnnqhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCF4VirPc3a11GvFRtSh01JfD05-6ayUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341778039663-2qfor0q2nj1d0r7sbjjrkc2t83nnnqhv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
