@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Name Generator',
+      title: 'Notepad',
       theme: ThemeData(
         primaryColor: Colors.blue,
         colorScheme: ColorScheme.highContrastLight(),
@@ -81,6 +81,9 @@ class _NotepadState extends State<Notepad> {
           ),
         ),
         subtitle: Text(note.content),
+        onTap: () {
+          _editListModalBottomSheet(note);
+        },
       ),
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
@@ -97,5 +100,33 @@ class _NotepadState extends State<Notepad> {
       padding: EdgeInsets.all(20.0),
       margin: EdgeInsets.all(10.0),
     );
+  }
+
+  void _editListModalBottomSheet(MockNotes note) {
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        builder: (BuildContext bc) {
+          return Container(
+            height: MediaQuery.of(context).size.height * .75,
+            child: Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        note.title,
+                        style: TextStyle(
+                          fontSize: 23.0,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }
