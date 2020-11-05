@@ -123,6 +123,35 @@ class _NotepadState extends State<Notepad> {
                       )
                     ],
                   ),
+                  new Expanded(
+                    child: DraggableScrollableSheet(
+                      builder:
+                          (BuildContext bc, ScrollController scrollController) {
+                        return Padding(
+                          padding: EdgeInsets.only(top: 20.0),
+                          child: ListView.builder(
+                            controller: scrollController,
+                            itemCount: 25,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                child: ListTile(title: Text('Item $index')),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  color: Colors.blue[100],
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)),
+                                ),
+                                padding: EdgeInsets.all(5.0),
+                                margin: EdgeInsets.all(5.0),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                      initialChildSize: 1,
+                      minChildSize: 0.99,
+                    ),
+                  ),
                 ],
               ),
             ),
